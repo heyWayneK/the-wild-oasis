@@ -18,8 +18,8 @@ import { Toaster } from "react-hot-toast";
 import Booking from "./pages/Booking";
 import Checkin from "./pages/Checkin";
 import { DarkModeProvider } from "./context/DarkModeContext";
-import ErrorFallback from "./ui/ErrorFallback";
-import { ErrorBoundary } from "react-error-boundary";
+// import ErrorFallback from "./ui/ErrorFallback";
+// import { ErrorBoundary } from "react-error-boundary";
 
 const StyledApp = styled.div`
   background-color: var(--color-brand-200);
@@ -63,12 +63,12 @@ function App() {
           <Routes>
             <Route
               element={
-                <ErrorBoundary
-                  FallbackComponent={ErrorFallback}
-                  onReset={() => window.location.replace("/")}
-                >
-                  <AppLayout />
-                </ErrorBoundary>
+                // <ErrorBoundary
+                //   FallbackComponent={ErrorFallback}
+                //   onReset={() => window.location.replace("/")}
+                // >
+                <AppLayout />
+                // </ErrorBoundary>
               }
             >
               <Route index element={<Navigate replace to="dashboard" />} />
