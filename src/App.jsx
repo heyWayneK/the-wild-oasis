@@ -17,7 +17,6 @@ import { Toaster } from "react-hot-toast";
 
 import Booking from "./pages/Booking";
 import Checkin from "./pages/Checkin";
-import ProtectedRoute from "./ui/protectedRoute";
 import { DarkModeProvider } from "./context/DarkModeContext";
 import ErrorFallback from "./ui/ErrorFallback";
 import { ErrorBoundary } from "react-error-boundary";
@@ -68,9 +67,7 @@ function App() {
                   FallbackComponent={ErrorFallback}
                   onReset={() => window.location.replace("/")}
                 >
-                  <ProtectedRoute>
-                    <AppLayout />
-                  </ProtectedRoute>
+                  <AppLayout />
                 </ErrorBoundary>
               }
             >
